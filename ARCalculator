@@ -176,17 +176,37 @@ while verify == 1:
             break
         #Still need to make a filter to make sure that the EXP entered is an integer and can be calculated
         exp = (input("How much EXP do you have in your current Adventure Rank right now?"))
-        total = level + int(exp)
-        calculation = level2 - total
-        daily = 1500
-        final = calculation/daily
-        if math.ceil(final) == 1:
-            print("It will take 1 day to rank up to the next Adventure Rank.")
+        gateway = 1
+        if exp.isdigit():
+            total = level + int(exp)
+            calculation = level2 - total
+            daily = 1500
+            final = calculation/daily
+            if math.ceil(final) == 1:
+                print("It will take 1 day to rank up to the next Adventure Rank.")
+            else:
+                print("It will take", end= " ")
+                print(math.ceil(final), end= " ")
+                print("days to rank up to the next Adventure Rank.")
+            exit()
         else:
-            print("It will take", end= " ")
-            print(math.ceil(final), end= " ")
-            print("days to rank up to the next Adventure Rank.")
-        exit()
+            while gateway == 1:
+                gateway = 0
+                exp = input("Please enter an integer.")
+                if exp.isdigit():
+                    total = level + int(exp)
+                    calculation = level2 - total
+                    daily = 1500
+                    final = calculation/daily
+                    if math.ceil(final) == 1:
+                        print("It will take 1 day to rank up to the next Adventure Rank.")
+                    else:
+                        print("It will take", end= " ")
+                        print(math.ceil(final), end= " ")
+                        print("days to rank up to the next Adventure Rank.")
+                    exit()
+                else:
+                    gateway = 1
         
         
         
