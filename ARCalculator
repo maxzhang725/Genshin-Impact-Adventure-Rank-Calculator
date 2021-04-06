@@ -1,0 +1,195 @@
+import math
+verify = 1
+while verify == 1:
+    while True:
+        level = (input("Hello user, please enter Adventure Rank Level: "))
+        if level.isdigit():
+            if level == ("1"):
+                level = 0
+                level2 = 375
+            elif level == ("2"):
+                level = 375
+                level2 = 875
+            elif level == ("3"):
+                level = 875
+                level2 = 1500
+            elif level == ("4"):
+                level = 1500
+                level2 = 2225
+            elif level == ("5"):
+                level = 2225
+                level2 = 3075
+            elif level == ("6"):
+                level = 3075
+                level2 = 4025
+            elif level == ("7"):
+                level = 4025
+                level2 = 5100
+            elif level == ("8"):
+                level = 5100
+                level2 = 6275
+            elif level == ("9"):
+                level = 6275
+                level2 = 7575
+            elif level == ("10"):
+                level = 7575
+                level2 = 9000
+            elif level == ("11"):
+                level = 9000
+                level2 = 10525
+            elif level == ("12"):
+                level = 10525
+                level2 = 12175
+            elif level == ("13"):
+                level = 12175
+                level2 = 13950
+            elif level == ("14"):
+                level = 13950
+                level2 = 15825
+            elif level == ("15"):
+                level = 15825
+                level2 = 17825
+            elif level == ("16"):
+                level = 17825
+                level2 = 20200
+            elif level == ("17"):
+                level = 20200
+                level2 = 22700
+            elif level == ("18"):
+                level = 22700
+                level2 = 25325
+            elif level == ("19"):
+                level = 25325
+                level2 = 28100
+            elif level == ("20"):
+                level = 28100
+                level2 = 30925
+            elif level == ("21"):
+                level = 30925
+                level2 = 34350
+            elif level == ("22"):
+                level = 34350
+                level2 = 38075
+            elif level == ("23"):
+                level = 38075
+                level2 = 42075
+            elif level == ("24"):
+                level = 42075
+                level2 = 46375
+            elif level == ("25"):
+                level = 46375
+                level2 = 50950
+            elif level == ("26"):
+                level = 50950
+                level2 = 55825
+            elif level == ("27"):
+                level = 55825
+                level2 = 60975
+            elif level == ("28"):
+                level = 60975
+                level2 = 66425
+            elif level == ("29"):
+                level = 66425
+                level2 = 72150
+            elif level == ("30"):
+                level = 72150
+                level2 = 78175
+            elif level == ("31"):
+                level = 78175
+                level2 = 84475
+            elif level == ("32"):
+                level = 84475
+                level2 = 91075
+            elif level == ("33"):
+                level = 91075
+                level2 = 97975
+            elif level == ("34"):
+                level = 97975
+                level2 = 105150
+            elif level == ("35"):
+                level = 105150
+                level2 = 112625
+            elif level == ("36"):
+                level = 112625
+                level2 = 120375
+            elif level == ("37"):
+                level = 120375
+                level2 = 128425
+            elif level == ("38"):
+                level = 128425
+                level2 = 136750
+            elif level == ("39"):
+                level = 136750
+                level2 = 145375
+            elif level == ("40"):
+                level = 145375
+                level2 = 155925
+            elif level == ("41"):
+                level = 155925
+                level2 = 167450
+            elif level == ("42"):
+                level = 167450
+                level2 = 179925
+            elif level == ("43"):
+                level = 179925
+                level2 = 193375
+            elif level == ("44"):
+                level = 193375
+                level2 = 207775
+            elif level == ("45"):
+                level = 207775
+                level2 = 223125
+            elif level == ("46"):
+                level = 223125
+                level2 = 239450
+            elif level == ("47"):
+                level = 239450
+                level2 = 256725
+            elif level == ("48"):
+                level = 256725
+                level2 = 274975
+            elif level == ("49"):
+                level = 274975
+                level2 = 294175
+            elif level == ("50"):
+                level = 294175
+                level2 = 320575
+            elif level == ("51"):
+                level = 320575
+                level2 = 349375
+            elif level == ("52"):
+                level = 349375
+                level2 = 380575
+            elif level == ("53"):
+                level = 380575
+                level2 = 414175
+            elif level == ("54"):
+                level = 414175
+                level2 = 450175
+            elif level == ("55"):
+                level = 450175
+                level2 = 682525
+            elif level == ("56"):
+                level = 682525
+        else:
+            print("Please type out an integer.")
+            break
+        #Still need to make a filter to make sure that the EXP entered is an integer and can be calculated
+        exp = (input("How much EXP do you have in your current Adventure Rank right now?"))
+        total = level + int(exp)
+        calculation = level2 - total
+        daily = 1500
+        final = calculation/daily
+        if math.ceil(final) == 1:
+            print("It will take 1 day to rank up to the next Adventure Rank.")
+        else:
+            print("It will take", end= " ")
+            print(math.ceil(final), end= " ")
+            print("days to rank up to the next Adventure Rank.")
+        exit()
+        
+        
+        
+
+   
+
