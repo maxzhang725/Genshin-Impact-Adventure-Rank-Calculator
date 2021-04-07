@@ -174,7 +174,6 @@ while verify == 1:
         else:
             print("Please type out an integer.")
             break
-        #Still need to make a filter to make sure that the EXP entered is an integer and can be calculated
         exp = (input("How much EXP do you have in your current Adventure Rank right now?"))
         gateway = 1
         if exp.isdigit():
@@ -190,6 +189,7 @@ while verify == 1:
                 print("days to rank up to the next Adventure Rank.")
             exit()
         else:
+            #"gateway" is to trap the code within the else statement above so that there is no repetition of "How much EXP do you have in your current Adventure Rank right now?", steamlining the experience overall.
             while gateway == 1:
                 gateway = 0
                 exp = input("Please enter an integer.")
